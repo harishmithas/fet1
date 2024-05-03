@@ -1,0 +1,21 @@
+interface JQuery {
+  ready(handler: () => void): void;
+  submit(handler: (event: JQuery.SubmitEvent) => void): void;
+}
+
+$(document).ready(() => {
+  $("#watchForm").submit((event) => {
+      event.preventDefault();
+
+      const watchModel: string = $("#watchModel").val() as string;
+      const watchBrand: string = $("#watchBrand").val() as string;
+      const quantity: number = parseInt($("#quantity").val() as string);
+      const deliveryAddress: string = $("#deliveryAddress").val() as string;
+
+      console.log("Form submitted!");
+      console.log("Watch Model:", watchModel);
+      console.log("Watch Brand:", watchBrand);
+      console.log("Quantity:", quantity);
+      console.log("Delivery Address:", deliveryAddress);
+  });
+});

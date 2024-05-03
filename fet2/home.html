@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Watch Shopping</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .watch {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .buy-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Online Watch Shopping</h1>
+    </header>
+
+    <div class="container">
+        <div class="watch" id="watch1">
+            <h2>Classic Watch</h2>
+            <img src="w1.jpg" alt="Classic Watch">
+            <p>$99.99</p>
+            <button class="buy-button" data-price="99.99">Buy Now</button>
+        </div>
+
+        <div class="watch" id="watch2">
+            <h2>Sporty Watch</h2>
+            <img src="w2.jpg" alt="Sporty Watch">
+            <p>$129.99</p>
+            <button class="buy-button" data-price="129.99">Buy Now</button>
+        </div>
+        
+            
+
+    <script>
+        $(document).ready(function () {
+            $(".buy-button").on("click", function () {
+                var price = parseFloat($(this).data("price"));
+                alert("Item added to cart. Total price: $" + price.toFixed(2));
+            });
+        });
+    </script>
+</body>
+
+</html>

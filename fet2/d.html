@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Shop</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('w1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Cart Icon Styles */
+        .cart-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .cart-icon img {
+            width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to our Watch Shop</h1>
+        <p>Discover a wide range of stylish and reliable watches.</p>
+        <a href="home.html">Shop Now</a>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon">
+        <img src="w2.jpg" alt="Cart">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // jQuery code for handling cart icon functionality (e.g., opening a shopping cart modal)
+        $(document).ready(function () {
+            $(".cart-icon").click(function () {
+                // Add your cart functionality here
+                alert("Open Shopping Cart");
+            });
+        });
+    </script>
+</body>
+
+</html>
